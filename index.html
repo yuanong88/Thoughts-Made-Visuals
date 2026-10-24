@@ -3,9 +3,13 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="referrer" content="no-referrer"/>
 <title>Thoughts Made Visuals Studio</title>
 <meta name="description" content="Thoughts Made Visuals Studio — Photography & Creative Direction, Malaysia."/>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23fff'/><text y='.9em' font-size='60' x='10' fill='%238a6030'>T</text></svg>"/>
+<link rel="preconnect" href="https://lh3.googleusercontent.com"/>
+<link rel="preconnect" href="https://drive.google.com"/>
+<link rel="preconnect" href="https://script.google.com"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
@@ -184,36 +188,6 @@ header{position:fixed;top:0;width:100%;z-index:500;background:rgba(255,255,255,.
 
 
 
-/* ══ PRINT ENQUIRY MODAL ══ */
-.pe-modal{position:fixed;inset:0;z-index:950;display:none;align-items:flex-end;justify-content:center;}
-.pe-modal.open{display:flex;}
-@media(min-width:600px){.pe-modal{align-items:center;}}
-.pe-modal-bg{position:absolute;inset:0;background:rgba(0,0,0,.5);backdrop-filter:blur(6px);}
-.pe-modal-box{position:relative;z-index:1;background:var(--white);width:100%;max-width:520px;max-height:92vh;overflow-y:auto;border-radius:20px 20px 0 0;padding:2rem 1.8rem 2.5rem;animation:slideUp .35s cubic-bezier(.25,.46,.45,.94);}
-@media(min-width:600px){.pe-modal-box{border-radius:16px;padding:2.5rem;}}
-@keyframes slideUp{from{transform:translateY(40px);opacity:0;}to{transform:translateY(0);opacity:1;}}
-.pe-close{position:absolute;top:1rem;right:1.2rem;background:none;border:none;font-size:1.2rem;cursor:pointer;color:var(--mid);line-height:1;transition:color .2s;}
-.pe-close:hover{color:var(--dark);}
-.pe-title{font-size:1.3rem;font-weight:400;color:var(--dark);margin-bottom:.3rem;}
-.pe-sub{font-family:'Helvetica Neue',sans-serif;font-size:.72rem;color:var(--mid);margin-bottom:1.6rem;line-height:1.7;}
-.pe-field{margin-bottom:1.1rem;}
-.pe-label{font-family:'Helvetica Neue',sans-serif;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);display:block;margin-bottom:.4rem;}
-.pe-req{color:var(--brown);}
-.pe-input{width:100%;font-family:'Helvetica Neue',sans-serif;font-size:.82rem;padding:.65rem .85rem;border:1px solid var(--border);border-radius:6px;outline:none;transition:border-color .25s;color:var(--dark);background:#fff;}
-.pe-input:focus{border-color:var(--tan);}
-.pe-input::placeholder{color:rgba(0,0,0,.3);}
-.pe-opts{display:flex;flex-wrap:wrap;gap:.45rem;}
-.pe-opt{font-family:'Helvetica Neue',sans-serif;font-size:.65rem;letter-spacing:.08em;padding:.4rem .95rem;border:1px solid var(--border);border-radius:20px;background:none;color:var(--mid);cursor:pointer;transition:all .22s;}
-.pe-opt:hover{border-color:var(--tan);color:var(--brown);}
-.pe-opt.sel{background:var(--dark);color:#fff;border-color:var(--dark);}
-.pe-error{font-family:'Helvetica Neue',sans-serif;font-size:.7rem;color:#c0392b;min-height:1.1rem;margin-bottom:.5rem;}
-.pe-submit{width:100%;font-family:'Helvetica Neue',sans-serif;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;background:var(--dark);color:#fff;border:none;padding:.95rem;border-radius:6px;cursor:pointer;transition:background .3s;margin-top:.4rem;}
-.pe-submit:hover{background:var(--brown);}
-.pe-success{display:none;text-align:center;padding:2.5rem 1rem 1rem;}
-.pe-success-icon{font-size:2.2rem;margin-bottom:.8rem;}
-.pe-success h3{font-size:1.2rem;font-weight:400;color:var(--dark);margin-bottom:.6rem;}
-.pe-success p{font-family:'Helvetica Neue',sans-serif;font-size:.78rem;color:var(--mid);line-height:1.9;}
-
 /* ══ HOME CONTACT ══ */
 .home-contact{background:var(--cream);padding:8rem 2.5rem 6rem;text-align:center;border-top:1px solid var(--border);}
 .home-contact-inner{max-width:900px;margin:0 auto;}
@@ -233,9 +207,35 @@ header{position:fixed;top:0;width:100%;z-index:500;background:rgba(255,255,255,.
 /* ══ CATEGORY BENTO GALLERY ══ */
 .cat-section{max-width:1400px;margin:0 auto;padding:2.5rem 2.5rem 0;}
 .cat-section:last-child{padding-bottom:6rem;}
-.cat-header{display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:1.2rem;}
-.cat-header-name{font-family:'Helvetica Neue',sans-serif;font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--mid);}
-.cat-header-count{font-family:'Helvetica Neue',sans-serif;font-size:.55rem;color:rgba(0,0,0,.2);letter-spacing:.1em;}
+.cat-header{display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--border);padding-bottom:1rem;margin-bottom:1.2rem;cursor:pointer;user-select:none;transition:border-color .3s;}
+.cat-header:hover{border-color:var(--tan);}
+.cat-header-name{font-family:'Helvetica Neue',sans-serif;font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--mid);transition:color .3s;}
+.cat-header:hover .cat-header-name{color:var(--dark);}
+.cat-header-right{display:flex;align-items:center;gap:1.2rem;}
+.cat-header-count{font-family:'Helvetica Neue',sans-serif;font-size:.55rem;color:rgba(0,0,0,.3);letter-spacing:.1em;}
+.cat-toggle-btn{font-family:'Helvetica Neue',sans-serif;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--tan);background:none;border:1px solid var(--border);padding:.35rem .85rem;border-radius:20px;cursor:pointer;transition:all .3s;display:inline-flex;align-items:center;gap:.4rem;}
+.cat-header:hover .cat-toggle-btn,.cat-toggle-btn:hover{border-color:var(--tan);color:var(--brown);}
+.cat-section.expanded .cat-toggle-btn{background:var(--dark);color:var(--white);border-color:var(--dark);}
+
+/* Collapsed preview row */
+.cat-preview-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:8px;}
+.cat-preview-item{position:relative;aspect-ratio:4/3;border-radius:10px;overflow:hidden;cursor:pointer;background:var(--beige);}
+.cat-preview-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s ease;}
+.cat-preview-item:hover img{transform:scale(1.05);}
+.cat-preview-item::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.45) 0%,transparent 55%);pointer-events:none;}
+.cat-preview-more{position:absolute;inset:0;background:rgba(17,17,17,.58);backdrop-filter:blur(3px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.35rem;z-index:2;transition:background .3s;}
+.cat-preview-item:hover .cat-preview-more{background:rgba(138,96,48,.75);}
+.cat-preview-more-num{font-family:'Georgia',serif;font-size:1.5rem;color:#fff;font-style:italic;}
+.cat-preview-more-txt{font-family:'Helvetica Neue',sans-serif;font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.85);}
+
+/* Expandable full gallery container */
+.cat-full-wrap{display:none;animation:fadeExpand .45s ease forwards;}
+@keyframes fadeExpand{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+.cat-section.expanded .cat-preview-row{display:none;}
+.cat-section.expanded .cat-full-wrap{display:block;}
+.cat-collapse-bar{display:flex;justify-content:center;padding:1rem 0 .5rem;}
+.cat-collapse-btn{font-family:'Helvetica Neue',sans-serif;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mid);background:var(--beige);border:1px solid var(--border);padding:.5rem 1.4rem;border-radius:20px;cursor:pointer;transition:all .3s;}
+.cat-collapse-btn:hover{background:var(--dark);color:#fff;border-color:var(--dark);}
 
 /* Mosaic grid — 12 columns, auto rows based on a base unit */
 .cat-mosaic{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:60px;gap:8px;margin-bottom:8px;}
@@ -300,7 +300,8 @@ header{position:fixed;top:0;width:100%;z-index:500;background:rgba(255,255,255,.
 .contact-copy{font-family:'Helvetica Neue',sans-serif;font-size:.58rem;color:rgba(0,0,0,.25);letter-spacing:.12em;text-transform:uppercase;}
 
 /* ══ INSTAGRAM FLOAT ══ */
-.ig-float{position:fixed;bottom:2rem;right:2rem;z-index:600;width:46px;height:46px;border-radius:50%;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(220,39,67,.3);text-decoration:none;transition:transform .3s;}
+.ig-float{position:fixed;bottom:2rem;right:2rem;z-index:600;width:46px;height:46px;border-radius:50%;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(220,39,67,.3);text-decoration:none;transition:transform .3s,bottom .3s;}
+.ig-float.shifted{bottom:4.8rem;}
 .ig-float:hover{transform:scale(1.1);}
 .ig-float svg{width:21px;height:21px;fill:#fff;}
 
@@ -327,8 +328,7 @@ header{position:fixed;top:0;width:100%;z-index:500;background:rgba(255,255,255,.
 @media(max-width:1100px){
   .bento-grid{grid-template-columns:repeat(6,1fr);grid-template-rows:300px 220px;padding:1.5rem;}
   .b5{grid-column:span 3;}.b4{grid-column:span 3;}.b3{grid-column:span 2;}.b7{grid-column:span 4;}
-  .cat-bento.layout-c{grid-template-columns:repeat(2,1fr);grid-template-rows:200px 200px;}
-  .prints-track{padding:0 1.5rem 1rem;}
+  .cat-mosaic{grid-auto-rows:50px;}
 }
 @media(max-width:768px){
   .header-inner{padding:0 1.2rem;}
@@ -337,20 +337,42 @@ header{position:fixed;top:0;width:100%;z-index:500;background:rgba(255,255,255,.
   .home-hero-text{bottom:3rem;left:1.8rem;right:1.8rem;}
   .home-hero-text h1{font-size:clamp(2.5rem,10vw,4rem);}
   .home-hero-tagline{font-size:.78rem;}
+  .hero-dots{right:1.8rem;bottom:1.5rem;}
+  .hero-slide-counter{right:1.8rem;top:1.5rem;}
+  .hero-arrow-prev{left:1rem;}
+  .hero-arrow-next{right:1rem;}
   .bento-grid{grid-template-columns:1fr 1fr;grid-template-rows:220px 220px 160px;gap:8px;padding:1rem;}
   .b5,.b4,.b7{grid-column:span 2;}.b3{grid-column:span 1;}
   .section-row{padding:1.8rem 1.2rem 1rem;}
   .home-interlude{padding:4rem 1.5rem;}
-  .prints-track{padding:0 1.2rem 1rem;}.print-card{width:240px;}
-  
-  .cat-section{padding:1.5rem 1.2rem 0;}.cat-bento.layout-a,.cat-bento.layout-b,.cat-bento.layout-d{grid-template-columns:1fr 1fr;grid-template-rows:200px;}.cat-bento.layout-b .cb-item:first-child{grid-row:span 1;}
+  .print-card{height:240px;}
+  .print-card img{height:240px;}
+  .print-card.is-portrait img{width:180px;}
+  .print-card.is-landscape img{width:320px;}
+  .print-card:not(.is-portrait):not(.is-landscape) img{width:240px;}
+  .cat-section{padding:1.5rem 1.2rem 0;}
+  .cat-preview-row{grid-template-columns:repeat(2,1fr);gap:8px;}
+  .cat-mosaic{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px;gap:8px;}
+  .cs-3,.cs-4,.cs-5,.cs-6{grid-column:span 1;}
+  .cs-7,.cs-8,.cs-12{grid-column:span 2;}
+  .rs-4,.rs-5{grid-row:span 1;}
+  .rs-6,.rs-7,.rs-8{grid-row:span 2;}
   .about-wrap{grid-template-columns:1fr;gap:2.5rem;padding:3rem 1.2rem 5rem;}
   #page-contact{padding:5rem 1.5rem 4rem;}
   .home-contact{padding:5rem 1.5rem 4rem;}
+  .shop-header-inner{padding:0 1.2rem;}
+  .shop-grid-wrap{padding:1.5rem 1.2rem 7rem;}
+  .shop-footer-bar{padding:.8rem 1.2rem;gap:1rem;}
+  .ig-float.shifted{bottom:5.2rem;}
 }
 @media(max-width:480px){
-  .cat-bento{grid-template-columns:1fr!important;}.cat-bento .cb-item{height:220px;}
-  .print-card{width:200px;}
+  .cat-mosaic{grid-template-columns:1fr;grid-auto-rows:auto;}
+  .cat-mosaic .cb-item{grid-column:span 1!important;grid-row:span 1!important;height:240px;}
+  .print-card{height:200px;}
+  .print-card img{height:200px;}
+  .print-card.is-portrait img{width:150px;}
+  .print-card.is-landscape img{width:267px;}
+  .print-card:not(.is-portrait):not(.is-landscape) img{width:200px;}
 }
 
 
@@ -596,7 +618,7 @@ header{position:fixed;top:0;width:100%;z-index:500;background:rgba(255,255,255,.
   <div class="prints-section">
     <div class="section-row reveal" style="background:var(--white);">
       <span class="section-row-label">Prints</span>
-      <span class="section-row-link" style="color:var(--mid);cursor:default;font-size:.58rem;">Scroll to browse →</span>
+      <button class="section-row-link" onclick="showPage('prints')">View all prints →</button>
     </div>
     <div class="prints-track-wrap">
       <div class="prints-belt" id="printsTrack">
@@ -780,20 +802,50 @@ header{position:fixed;top:0;width:100%;z-index:500;background:rgba(255,255,255,.
 </div>
 
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 const API='https://script.google.com/macros/s/AKfycbyU4RotgX72dGYeVdtbj4KWdnVFvrXJd8hAvAal1fv3jChDR3VUKJXeNhIqDzto3Q3T/exec';
+const CACHE_KEY='tmv_photos_cache_v1';
 let allPhotos=[],displayedPhotos=[],lbIdx=0;
 let heroSlides=[],heroIdx=0,heroTimer=null;
+let galleryBuilt=false,printsPageBuilt=false,aboutPhotoSet=false;
+let cachedPortfolioPhotos=[],cachedPrintPhotos=[];
 
-// Loader
-// Loader - always hide after 1.8s regardless of API status
-// Hide loader: try on window load, but also force-hide after 3s max
+// Resize Google Drive CDN URLs dynamically for faster loading
+function sizeUrl(url,w){
+  if(!url) return '';
+  if(url.includes('lh3.googleusercontent.com/d/')){
+    return url.replace(/=w\d+.*$/,'')+'=w'+(w||1000);
+  }
+  return url;
+}
+
+// Automatic fallback if lh3.googleusercontent.com is rate-limited (HTTP 429)
+function handleImgError(img,w){
+  if(!img||img.dataset.retried) return;
+  img.dataset.retried='1';
+  const src=img.getAttribute('src')||'';
+  const m=src.match(/\/d\/([a-zA-Z0-9_-]+)/);
+  if(m&&m[1]){
+    img.src='https://drive.google.com/thumbnail?id='+m[1]+'&sz=w'+(w||1000);
+  }
+}
+
+// Hydrate deferred images inside a container
+function hydrateImages(root){
+  if(!root) return;
+  root.querySelectorAll('img[data-src]').forEach(img=>{
+    img.src=img.dataset.src;
+    img.removeAttribute('data-src');
+  });
+}
+
+// Loader - hide as soon as first hero image is ready or after 1.2s
 function hideLoader(){
   const l=document.getElementById('loader');
   if(l&&!l._hidden){l._hidden=true;l.classList.add('hide');setTimeout(()=>{l.style.display='none';},900);}
 }
-window.addEventListener('load',()=>setTimeout(hideLoader,1800));
-setTimeout(hideLoader,3000); // hard fallback — always dismiss loader within 3s
+window.addEventListener('load',()=>setTimeout(hideLoader,900));
+setTimeout(hideLoader,2000); // hard fallback — always dismiss loader within 2s
 
 // Cursor
 const curEl=document.getElementById('cur'),rngEl=document.getElementById('rng');
@@ -812,7 +864,7 @@ const rObs=new IntersectionObserver(es=>{
 },{threshold:.08,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal,.reveal-left,.reveal-scale,.reveal-stagger').forEach(el=>rObs.observe(el));
 
-// Page switch
+// Page switch — build & load tab images on-demand so hidden tabs never block initial load
 function showPage(name){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.tab-trigger').forEach(b=>b.classList.remove('active'));
@@ -821,30 +873,56 @@ function showPage(name){
   if(pg) pg.classList.add('active');
   if(tb) tb.classList.add('active');
   window.scrollTo(0,0);
+
+  if(name==='gallery'&&!galleryBuilt&&cachedPortfolioPhotos.length){
+    galleryBuilt=true;
+    buildGallery(cachedPortfolioPhotos);
+  }else if(name==='prints'&&!printsPageBuilt&&cachedPrintPhotos.length){
+    printsPageBuilt=true;
+    buildPrintsPage(cachedPrintPhotos);
+  }else if(name==='about'&&!aboutPhotoSet&&cachedPortfolioPhotos.length){
+    aboutPhotoSet=true;
+    setAboutPhoto(cachedPortfolioPhotos);
+  }
+
   document.querySelectorAll('#page-'+name+' .reveal,#page-'+name+' .reveal-left,#page-'+name+' .reveal-scale,#page-'+name+' .reveal-stagger').forEach(el=>{
     el.classList.remove('visible');
     setTimeout(()=>rObs.observe(el),80);
   });
-  // Show shop footer bar only on prints page
+  // Show shop footer bar only on prints page, and shift IG button up so they don't overlap
   const bar=document.getElementById('shopFooterBar');
+  const ig=document.querySelector('.ig-float');
   if(bar) bar.style.display=(name==='prints')?'flex':'none';
+  if(ig) ig.classList.toggle('shifted',name==='prints');
 }
 
 // ── HERO SLIDESHOW ──
+function isLandingCategory(cat){
+  return cat==='Landing Page Folder'||cat==='Landing Page';
+}
+
 function buildHeroImg(photos){
-  // Prefer "Landing Page" tagged photos; fall back to ALL photos so slideshow always has content
-  const landing=photos.filter(p=>p.category==='Landing Page');
-  heroSlides=[...(landing.length?landing:photos)].sort(()=>Math.random()-.5);
+  // Use ONLY photos from the Landing Page Folder
+  const landing=photos.filter(p=>isLandingCategory(p.category));
+  heroSlides=[...landing].sort(()=>Math.random()-.5);
   if(!heroSlides.length) return;
-  // Pre-create all slide imgs in DOM (so opacity transitions fire instantly)
   const el=document.getElementById('heroImg');
   el.innerHTML=''; // clear any stale slides
   heroSlides.forEach((p,i)=>{
     const img=document.createElement('img');
-    img.src=p.url;
+    const heroUrl=sizeUrl(p.url,1600);
+    if(i===0){
+      img.src=heroUrl;
+      img.setAttribute('fetchpriority','high');
+      img.onload=()=>hideLoader();
+    }else{
+      // Defer slides 2..N until slide 1 or slide navigation needs them
+      img.dataset.src=heroUrl;
+    }
     img.dataset.i=String(i);
     img.alt='';
-    img.loading=i===0?'eager':'lazy';
+    img.decoding='async';
+    img.onerror=function(){handleImgError(this,1600);};
     el.appendChild(img);
   });
   // Build dot indicators
@@ -865,13 +943,27 @@ function buildHeroImg(photos){
   showHeroSlide(0);
 }
 
+function ensureHeroSlideLoaded(idx){
+  const el=document.getElementById('heroImg');
+  if(!el||!heroSlides.length) return null;
+  const norm=((idx%heroSlides.length)+heroSlides.length)%heroSlides.length;
+  const slide=el.querySelector('[data-i="'+norm+'"]');
+  if(slide&&slide.dataset.src){
+    slide.src=slide.dataset.src;
+    slide.removeAttribute('data-src');
+  }
+  return slide;
+}
+
 function showHeroSlide(i, manual){
   const el=document.getElementById('heroImg');
   if(!el||!heroSlides.length) return;
   heroIdx=((i%heroSlides.length)+heroSlides.length)%heroSlides.length;
+  // Ensure current and next slide are loaded
+  const slide=ensureHeroSlideLoaded(heroIdx);
+  setTimeout(()=>ensureHeroSlideLoaded(heroIdx+1),800);
   // Update images
   el.querySelectorAll('img').forEach(img=>img.classList.remove('active'));
-  const slide=el.querySelector('[data-i="'+heroIdx+'"]');
   if(slide) requestAnimationFrame(()=>requestAnimationFrame(()=>slide.classList.add('active')));
   // Update dots
   document.querySelectorAll('.hero-dot').forEach((d,j)=>d.classList.toggle('active',j===heroIdx));
@@ -883,9 +975,7 @@ function showHeroSlide(i, manual){
   }
   // Auto-advance
   clearTimeout(heroTimer);
-  if(!manual||heroSlides.length>1){
-    heroTimer=setTimeout(()=>showHeroSlide(heroIdx+1),5000);
-  } else {
+  if(heroSlides.length>1){
     heroTimer=setTimeout(()=>showHeroSlide(heroIdx+1),5000);
   }
 }
@@ -894,32 +984,71 @@ function heroNav(dir){
   showHeroSlide(heroIdx+dir, true);
 }
 
-// ── FETCH ──
+// ── RENDER DATA (used by both cache and fresh fetch) ──
+function applyPhotoData(data, isInitial){
+  allPhotos = data;
+  displayedPhotos = data;
+  cachedPortfolioPhotos = data.filter(p=>p.category !== 'Prints' && !isLandingCategory(p.category));
+  cachedPrintPhotos = data.filter(p=>p.category === 'Prints');
+
+  if(isInitial){
+    buildHeroImg(data);
+    buildBento(cachedPortfolioPhotos);
+    buildEdGrid2(cachedPrintPhotos);
+  }
+  // If user is already viewing another tab when fresh data arrives, build/update it
+  const activePage=document.querySelector('.page.active');
+  const activeId=activePage?activePage.id:'page-home';
+  if(activeId==='page-gallery'&&!galleryBuilt){
+    galleryBuilt=true;
+    buildGallery(cachedPortfolioPhotos);
+  }else if(activeId==='page-prints'&&!printsPageBuilt){
+    printsPageBuilt=true;
+    buildPrintsPage(cachedPrintPhotos);
+  }else if(activeId==='page-about'&&!aboutPhotoSet){
+    aboutPhotoSet=true;
+    setAboutPhoto(cachedPortfolioPhotos);
+  }
+}
+
+// ── FETCH (with instant localStorage cache + background refresh) ──
 async function fetchPhotos(){
+  let hadCache=false;
+  try{
+    const raw=localStorage.getItem(CACHE_KEY);
+    if(raw){
+      const cached=JSON.parse(raw);
+      if(Array.isArray(cached)&&cached.length){
+        hadCache=true;
+        applyPhotoData(cached, true);
+      }
+    }
+  }catch(_){}
+
   try{
     const res = await fetch(API);
     if(!res.ok) throw new Error('API error '+res.status);
     const data = await res.json();
-    allPhotos = data;
-    displayedPhotos = data;
+    const prevRaw = localStorage.getItem(CACHE_KEY);
+    const nextRaw = JSON.stringify(data);
+    try{ localStorage.setItem(CACHE_KEY, nextRaw); }catch(_){}
 
-    // Portfolio sections — exclude Prints from gallery/bento/hero
-    const portfolioPhotos = data.filter(p=>p.category !== 'Prints');
-    buildHeroImg(portfolioPhotos);
-    buildBento(portfolioPhotos);
-    buildGallery(portfolioPhotos);
-    setAboutPhoto(portfolioPhotos);
-
-    // Prints section — ONLY photos whose category is exactly "Prints"
-    const printPhotos = data.filter(p=>p.category === 'Prints');
-    buildEdGrid2(printPhotos);
-
+    if(!hadCache){
+      applyPhotoData(data, true);
+    }else if(prevRaw !== nextRaw){
+      // Update cached arrays if Drive contents changed
+      galleryBuilt=false;
+      printsPageBuilt=false;
+      applyPhotoData(data, false);
+    }
   }catch(e){
     console.error('fetchPhotos error:', e);
-    const err='<div class="error-state">Could not load photos. Check your Google Drive folder.</div>';
-    document.getElementById('bentoGrid').innerHTML=err;
-    document.getElementById('galleryContent').innerHTML=err;
-    buildEdGrid2([]);
+    if(!hadCache){
+      const err='<div class="error-state">Could not load photos. Check your Google Drive folder.</div>';
+      document.getElementById('bentoGrid').innerHTML=err;
+      document.getElementById('galleryContent').innerHTML=err;
+      buildEdGrid2([]);
+    }
   }
 }
 
@@ -936,12 +1065,15 @@ function buildBento(photos){
   ];
   const g=document.getElementById('bentoGrid');
   g.innerHTML='';
+  const bentoPhotos=slots.filter(s=>s.photo).map(s=>s.photo);
+  let slotIdx=0;
   slots.forEach(s=>{
     if(!s.photo) return;
+    const curSlotIdx=slotIdx++;
     const d=document.createElement('div');
     d.className=`bento-item ${s.span} reveal`;
-    d.onclick=()=>openLbSingle(s.photo);
-    d.innerHTML=`<img src="${s.photo.url}" alt="" loading="lazy" onerror="this.style.display='none'"/>
+    d.onclick=()=>openCatLightbox(curSlotIdx,bentoPhotos);
+    d.innerHTML=`<img src="${sizeUrl(s.photo.url,900)}" alt="" loading="lazy" decoding="async" onerror="handleImgError(this,900)"/>
       <div class="bento-info"><div class="cat">${s.label}</div><div class="num">${s.num}</div></div>`;
     g.appendChild(d);
     setTimeout(()=>rObs.observe(d),50);
@@ -961,14 +1093,17 @@ function makeCard(p, i, eager){
   const card=document.createElement('div');
   card.className='print-card';
   const img=document.createElement('img');
-  img.src=p.url;
+  img.src=sizeUrl(p.url,600);
   img.alt='Print '+(i+1);
-  img.loading=eager?'eager':'lazy';
+  img.loading='lazy';
+  img.decoding='async';
   img.style.cssText='object-fit:cover;display:block;';
   img.onload=function(){
     const isPortrait=this.naturalHeight>this.naturalWidth;
     card.classList.add(isPortrait?'is-portrait':'is-landscape');
   };
+  img.onerror=function(){handleImgError(this,600);};
+  card.onclick=()=>openShopPanel(p,i+1);
   card.appendChild(img);
   return card;
 }
@@ -986,7 +1121,7 @@ function buildEdGrid2(photos){
 
   // Build original set
   photos.forEach((p,i)=>{
-    const card=makeCard(p,i,i<4);
+    const card=makeCard(p,i,false);
     addH(card);
     belt.appendChild(card);
   });
@@ -995,10 +1130,9 @@ function buildEdGrid2(photos){
   photos.forEach((p,i)=>{
     const card=makeCard(p,i,false);
     card.setAttribute('aria-hidden','true');
+    addH(card);
     belt.appendChild(card);
   });
-
-  buildPrintsPage(photos);
 }
 
 function buildPrintsPage(photos){
@@ -1015,9 +1149,11 @@ function buildPrintsPage(photos){
     const tile=document.createElement('div');
     tile.className='shop-tile reveal';
     const img=document.createElement('img');
-    img.src=p.url;
+    img.src=sizeUrl(p.url,800);
     img.alt='Print '+(i+1);
     img.loading=i<6?'eager':'lazy';
+    img.decoding='async';
+    img.onerror=function(){handleImgError(this,800);};
     tile.appendChild(img);
 
     const overlay=document.createElement('div');
@@ -1057,7 +1193,8 @@ function openShopPanel(photo,num){
   const panel=document.getElementById('shopPanel');
   const img=document.getElementById('shopPanelImg');
   const wrap=img.parentElement;
-  img.src=photo.url;
+  wrap.style.display='block';
+  img.src=sizeUrl(photo.url,1200);
   img.onload=function(){
     if(this.naturalHeight>this.naturalWidth) wrap.classList.add('portrait');
     else wrap.classList.remove('portrait');
@@ -1074,8 +1211,16 @@ function openShopEnquiry(photo){
   // Opens panel with no specific photo selected (general enquiry)
   currentShopPhoto=photo||{url:'',name:'General Enquiry'};
   const panel=document.getElementById('shopPanel');
-  document.getElementById('shopPanelImg').src='';
-  document.getElementById('shopPanelNum').textContent='';
+  const img=document.getElementById('shopPanelImg');
+  const wrap=img.parentElement;
+  if(photo&&photo.url){
+    wrap.style.display='block';
+    img.src=sizeUrl(photo.url,1200);
+  }else{
+    wrap.style.display='none';
+    img.removeAttribute('src');
+  }
+  document.getElementById('shopPanelNum').textContent='Custom / General Order';
   document.getElementById('shopPanelTitle').textContent='Print Enquiry';
   resetShopForm();
   panel.classList.add('open');
@@ -1163,79 +1308,55 @@ function setAboutPhoto(photos){
   if(!photos.length) return;
   const pick=photos[Math.floor(Math.random()*photos.length)];
   const el=document.getElementById('aboutImg');
-  if(el) el.outerHTML=`<img class="about-img" id="aboutImg" src="${pick.url}" alt="" style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block;"/>`;
+  if(el) el.outerHTML=`<img class="about-img" id="aboutImg" src="${sizeUrl(pick.url,1000)}" decoding="async" onerror="handleImgError(this,1000)" alt="" style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block;"/>`;
 }
 
 // ── GALLERY — orientation-aware mosaic bento ──
 const CAT_ORDER=['Automotive','Coffee & Cafe','Travel','Product','Gastronomy and Beverage'];
 
-// Mosaic tile patterns for N photos (col-span out of 12, row-span in 60px units)
-// portrait = tall (rs-6/7), landscape = wide (cs-6/8) + short (rs-4/5)
-const MOSAIC_PATTERNS={
-  1:[[{c:12,r:8}]],
-  2:[
-    [{c:7,r:6},{c:5,r:6}],
-    [{c:5,r:6},{c:7,r:6}],
-  ],
-  3:[
-    [{c:7,r:6},{c:5,r:4},{c:5,r:4}], // wide left + 2 stack right — but 2 right need separate row
-    [{c:5,r:7},{c:7,r:4},{c:7,r:5}],
-    [{c:4,r:5},{c:4,r:5},{c:4,r:5}],
-  ],
-  4:[
-    [{c:7,r:6},{c:5,r:4},{c:5,r:5},{c:7,r:5}],
-    [{c:5,r:7},{c:4,r:4},{c:3,r:4},{c:7,r:5}],
-    [{c:4,r:5},{c:4,r:5},{c:4,r:5},{c:4,r:4}],
-  ],
-  5:[
-    [{c:5,r:6},{c:4,r:5},{c:3,r:5},{c:6,r:5},{c:6,r:5}],
-    [{c:4,r:7},{c:4,r:5},{c:4,r:5},{c:6,r:4},{c:6,r:4}],
-  ],
-  6:[
-    [{c:6,r:6},{c:3,r:5},{c:3,r:5},{c:4,r:5},{c:4,r:5},{c:4,r:4}],
-    [{c:4,r:5},{c:4,r:5},{c:4,r:5},{c:4,r:5},{c:4,r:5},{c:4,r:5}],
-  ],
-};
-
-function getMosaicLayout(n){
-  if(MOSAIC_PATTERNS[n]) {
-    const opts=MOSAIC_PATTERNS[n];
-    return opts[Math.floor(Math.random()*opts.length)];
-  }
-  // For 7+, use alternating 3-col rows
-  const tiles=[];
-  for(let i=0;i<n;i++) tiles.push({c:4,r:5});
-  return tiles;
-}
-
-// Detect orientation: if the image API returns width/height use it,
-// otherwise sniff from natural image dimensions after load
-function getOrientation(ph){
-  if(ph.width&&ph.height) return ph.width>=ph.height?'landscape':'portrait';
-  // Fall back to filename hints or default landscape
-  return 'landscape';
-}
-
 function buildMosaicSection(arr, cat, photoIndex, startIdx){
   const mosaic=document.createElement('div');
   mosaic.className='cat-mosaic';
 
-  // For each photo, load the image to detect real orientation, then assign tiles
+  // Pick one consistent pattern per chunk of 4–6 photos so the 12-column grid aligns cleanly
+  const patterns4=[
+    ['cs-7 rs-5','cs-5 rs-5','cs-5 rs-6','cs-7 rs-6'],
+    ['cs-5 rs-6','cs-7 rs-4','cs-7 rs-5','cs-5 rs-7'],
+    ['cs-4 rs-5','cs-4 rs-5','cs-4 rs-5','cs-4 rs-5'],
+    ['cs-6 rs-6','cs-6 rs-4','cs-6 rs-5','cs-6 rs-5'],
+  ];
+  const patterns5=[
+    ['cs-5 rs-5','cs-4 rs-5','cs-3 rs-5','cs-6 rs-5','cs-6 rs-5'],
+    ['cs-4 rs-6','cs-4 rs-5','cs-4 rs-5','cs-6 rs-4','cs-6 rs-5'],
+  ];
+  const patterns6=[
+    ['cs-4 rs-5','cs-4 rs-5','cs-4 rs-5','cs-4 rs-5','cs-4 rs-5','cs-4 rs-5'],
+    ['cs-6 rs-5','cs-3 rs-5','cs-3 rs-5','cs-4 rs-6','cs-4 rs-4','cs-4 rs-5'],
+  ];
+  let chunkPattern=null;
+  if(arr.length===4) chunkPattern=patterns4[Math.floor(Math.random()*patterns4.length)];
+  else if(arr.length===5) chunkPattern=patterns5[Math.floor(Math.random()*patterns5.length)];
+  else if(arr.length===6) chunkPattern=patterns6[Math.floor(Math.random()*patterns6.length)];
+
+  // Defer image loading using data-src until the user expands the category
   arr.forEach((ph,i)=>{
     const globalIdx=startIdx+i;
     const tile=document.createElement('div');
     tile.className='cb-item';
     tile.onclick=()=>openCatLightbox(globalIdx,photoIndex);
-    tile.innerHTML='<img src="'+ph.url+'" alt="" loading="lazy" crossorigin="anonymous"/>'
+    tile.innerHTML='<img data-src="'+sizeUrl(ph.url,900)+'" alt="" loading="lazy" decoding="async"/>'
       +'<span class="cb-item-label">'+cat+'</span>';
 
-    // Load image to detect orientation, then assign grid classes
+    // Assign initial default class immediately so grid has layout before image loads
+    assignTileClass(tile, i, arr.length, false, chunkPattern);
+
+    // Load image to detect orientation, then refine grid classes for 1–3 photo chunks
     const img=tile.querySelector('img');
     img.onload=function(){
       const isPortrait=this.naturalHeight>this.naturalWidth;
-      assignTileClass(tile, i, arr.length, isPortrait);
+      assignTileClass(tile, i, arr.length, isPortrait, chunkPattern);
     };
-    img.onerror=function(){assignTileClass(tile,i,arr.length,false);};
+    img.onerror=function(){handleImgError(this,900);assignTileClass(tile,i,arr.length,false,chunkPattern);};
 
     addH(tile);
     mosaic.appendChild(tile);
@@ -1244,10 +1365,10 @@ function buildMosaicSection(arr, cat, photoIndex, startIdx){
   return mosaic;
 }
 
-function assignTileClass(tile, i, total, isPortrait){
+function assignTileClass(tile, i, total, isPortrait, chunkPattern){
   // Remove any existing span classes
   tile.classList.remove('cs-3','cs-4','cs-5','cs-6','cs-7','cs-8','cs-12',
-                         'rs-4','rs-5','rs-6','rs-7','rs-8');
+                         'rs-4','rs-5','cs-6','rs-7','rs-8');
 
   // Orientation-aware sizing
   if(total===1){
@@ -1264,34 +1385,9 @@ function assignTileClass(tile, i, total, isPortrait){
     else tile.classList.add('cs-12','rs-4'); // bottom wide strip if 3rd
     return;
   }
-  // 4+ photos: use a flowing mosaic pattern
-  // Alternate portrait/landscape cols based on actual orientation
-  const colClass= isPortrait ? (i%3===0?'cs-4':'cs-4') : (i%3===0?'cs-8':'cs-4');
-  const rowClass= isPortrait ? 'rs-7' : 'rs-4';
 
-  // Use a set of fixed patterns that look good regardless
-  const patterns4=[
-    ['cs-7 rs-5','cs-5 rs-5','cs-5 rs-6','cs-7 rs-6'],
-    ['cs-5 rs-6','cs-7 rs-4','cs-7 rs-5','cs-5 rs-7'],
-    ['cs-4 rs-5','cs-4 rs-5','cs-4 rs-5','cs-4 rs-5'],
-    ['cs-6 rs-6','cs-6 rs-4','cs-6 rs-5','cs-6 rs-5'],
-  ];
-  const patterns5=[
-    ['cs-5 rs-5','cs-4 rs-5','cs-3 rs-5','cs-6 rs-5','cs-6 rs-5'],
-    ['cs-4 rs-6','cs-4 rs-5','cs-4 rs-5','cs-6 rs-4','cs-6 rs-5'],
-  ];
-  const patterns6=[
-    ['cs-4 rs-5','cs-4 rs-5','cs-4 rs-5','cs-4 rs-5','cs-4 rs-5','cs-4 rs-5'],
-    ['cs-6 rs-5','cs-3 rs-5','cs-3 rs-5','cs-4 rs-6','cs-4 rs-4','cs-4 rs-5'],
-  ];
-
-  let pattern=null;
-  if(total===4) pattern=patterns4[Math.floor(Math.random()*patterns4.length)];
-  else if(total===5) pattern=patterns5[Math.floor(Math.random()*patterns5.length)];
-  else if(total===6) pattern=patterns6[Math.floor(Math.random()*patterns6.length)];
-
-  if(pattern&&pattern[i]){
-    pattern[i].split(' ').forEach(cls=>tile.classList.add(cls));
+  if(chunkPattern&&chunkPattern[i]){
+    chunkPattern[i].split(' ').forEach(cls=>tile.classList.add(cls));
     return;
   }
 
@@ -1327,20 +1423,86 @@ function buildGallery(photos){
 
     const hdr=document.createElement('div');
     hdr.className='cat-header';
+    const toggleBtn=document.createElement('button');
+    toggleBtn.className='cat-toggle-btn';
+    toggleBtn.type='button';
+    toggleBtn.textContent='Expand +';
+
+    // 2. Full expandable mosaic gallery
+    const fullWrap=document.createElement('div');
+    fullWrap.className='cat-full-wrap';
+
+    function toggleSection(forceExpand){
+      const willExpand=typeof forceExpand==='boolean'?forceExpand:!sec.classList.contains('expanded');
+      if(willExpand) hydrateImages(fullWrap);
+      sec.classList.toggle('expanded',willExpand);
+      toggleBtn.textContent=willExpand?'Collapse −':'Expand +';
+    }
+
     hdr.innerHTML='<span class="cat-header-name">'+cat+'</span>'
-      +'<span class="cat-header-count">'+arr.length+' '+(arr.length===1?'photo':'photos')+'</span>';
+      +'<div class="cat-header-right">'
+      +'<span class="cat-header-count">'+arr.length+' '+(arr.length===1?'photo':'photos')+'</span>'
+      +'</div>';
+    hdr.querySelector('.cat-header-right').appendChild(toggleBtn);
+    hdr.onclick=()=>toggleSection();
+    addH(hdr);
     sec.appendChild(hdr);
 
-    // Build mosaic in chunks of 6 max for visual grouping
+    // 1. Collapsed single-row preview (up to 4 photos)
+    const previewRow=document.createElement('div');
+    previewRow.className='cat-preview-row';
+    const catStartIdx=globalIdx;
+    const previewCount=Math.min(arr.length,4);
+    const extraCount=arr.length-previewCount;
+
+    for(let i=0;i<previewCount;i++){
+      const ph=arr[i];
+      const item=document.createElement('div');
+      item.className='cat-preview-item';
+      const isLastWithMore=(i===previewCount-1 && extraCount>0);
+
+      let inner='<img src="'+sizeUrl(ph.url,600)+'" alt="" loading="lazy" decoding="async" onerror="handleImgError(this,600)"/>'
+        +'<span class="cb-item-label">'+cat+'</span>';
+      if(isLastWithMore){
+        inner+='<div class="cat-preview-more">'
+          +'<span class="cat-preview-more-num">+'+extraCount+'</span>'
+          +'<span class="cat-preview-more-txt">View all '+arr.length+' →</span>'
+          +'</div>';
+        item.onclick=()=>toggleSection(true);
+      }else{
+        const idx=catStartIdx+i;
+        item.onclick=()=>openCatLightbox(idx,photoIndex);
+      }
+      item.innerHTML=inner;
+      addH(item);
+      previewRow.appendChild(item);
+    }
+    sec.appendChild(previewRow);
+
     const chunkSize=6;
     for(let start=0;start<arr.length;start+=chunkSize){
       const chunk=arr.slice(start,start+chunkSize);
       const startGlobal=globalIdx;
       const mosaic=buildMosaicSection(chunk, cat, photoIndex, startGlobal);
       globalIdx+=chunk.length;
-      sec.appendChild(mosaic);
+      fullWrap.appendChild(mosaic);
     }
 
+    const collapseBar=document.createElement('div');
+    collapseBar.className='cat-collapse-bar';
+    const collapseBtn=document.createElement('button');
+    collapseBtn.className='cat-collapse-btn';
+    collapseBtn.type='button';
+    collapseBtn.textContent='Collapse '+cat+' ↑';
+    collapseBtn.onclick=()=>{
+      toggleSection(false);
+      sec.scrollIntoView({behavior:'smooth',block:'nearest'});
+    };
+    addH(collapseBtn);
+    collapseBar.appendChild(collapseBtn);
+    fullWrap.appendChild(collapseBar);
+
+    sec.appendChild(fullWrap);
     gc.appendChild(sec);
     setTimeout(()=>rObs.observe(sec),50);
   });
@@ -1358,7 +1520,7 @@ function openCatLightbox(i,arr){
 // ── LIGHTBOX ──
 function openLightbox(i){lbIdx=i;updateLb();document.getElementById('lightbox').classList.add('open');}
 function openLbSingle(p){
-  document.getElementById('lbWrap').innerHTML=`<img src="${p.url}" alt=""/>`;
+  document.getElementById('lbWrap').innerHTML=`<img src="${sizeUrl(p.url,1800)}" decoding="async" onerror="handleImgError(this,1800)" alt=""/>`;
   document.getElementById('lbCap').textContent=p.category||'Photography';
   document.getElementById('lightbox').classList.add('open');
 }
@@ -1366,8 +1528,11 @@ function closeLightbox(){document.getElementById('lightbox').classList.remove('o
 function lbNav(d){lbIdx=(lbIdx+d+displayedPhotos.length)%displayedPhotos.length;updateLb();}
 function updateLb(){
   const p=displayedPhotos[lbIdx];if(!p)return;
-  document.getElementById('lbWrap').innerHTML=`<img src="${p.url}" alt=""/>`;
+  document.getElementById('lbWrap').innerHTML=`<img src="${sizeUrl(p.url,1800)}" decoding="async" onerror="handleImgError(this,1800)" alt=""/>`;
   document.getElementById('lbCap').textContent=p.category||'Photography';
+  // Preload adjacent lightbox images
+  const nextP=displayedPhotos[(lbIdx+1)%displayedPhotos.length];
+  if(nextP){const pre=new Image();pre.src=sizeUrl(nextP.url,1800);}
 }
 document.getElementById('lightbox').addEventListener('click',e=>{if(e.target===document.getElementById('lightbox'))closeLightbox();});
 document.addEventListener('keydown',e=>{
@@ -1382,88 +1547,6 @@ document.getElementById('lightbox').addEventListener('touchend',e=>{
   if(Math.abs(dx)>50) lbNav(dx<0?1:-1);
 });
 
-
-// ── PRINT ENQUIRY MODAL ──
-function openPrintEnquiry(){
-  // Reset form state
-  document.getElementById('peForm').style.display='block';
-  document.getElementById('peSuccess').style.display='none';
-  document.getElementById('peError').textContent='';
-  ['peName','peEmail','pePhone','peRef','peNotes'].forEach(id=>{
-    const el=document.getElementById(id);
-    if(el) el.value='';
-  });
-  // Reset pill selections to first option
-  ['peSizes','peShipping'].forEach(grpId=>{
-    const grp=document.getElementById(grpId);
-    if(!grp) return;
-    grp.querySelectorAll('.pe-opt').forEach((b,i)=>b.classList.toggle('sel',i===0));
-  });
-  document.getElementById('peModal').classList.add('open');
-  document.body.style.overflow='hidden';
-}
-
-function closePrintEnquiry(){
-  document.getElementById('peModal').classList.remove('open');
-  document.body.style.overflow='';
-}
-
-// Pill selection inside the modal
-document.addEventListener('click',e=>{
-  if(e.target.classList.contains('pe-opt')){
-    const grp=e.target.closest('.pe-opts');
-    if(grp){
-      grp.querySelectorAll('.pe-opt').forEach(b=>b.classList.remove('sel'));
-      e.target.classList.add('sel');
-    }
-  }
-});
-
-// Close on Escape key
-document.addEventListener('keydown',e=>{
-  if(e.key==='Escape') closePrintEnquiry();
-});
-
-function submitPrintEnquiry(){
-  const name  = document.getElementById('peName').value.trim();
-  const email = document.getElementById('peEmail').value.trim();
-  const phone = document.getElementById('pePhone').value.trim();
-  const ref   = document.getElementById('peRef').value.trim();
-  const errEl = document.getElementById('peError');
-
-  // Validation
-  if(!name||!email||!phone||!ref){
-    errEl.textContent='Please fill in all required fields.';
-    return;
-  }
-  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
-    errEl.textContent='Please enter a valid email address.';
-    return;
-  }
-  errEl.textContent='';
-
-  const sizeBtn     = document.querySelector('#peSizes .pe-opt.sel');
-  const shippingBtn = document.querySelector('#peShipping .pe-opt.sel');
-  const size        = sizeBtn     ? sizeBtn.dataset.val     : 'Not specified';
-  const shipping    = shippingBtn ? shippingBtn.dataset.val : 'Not specified';
-  const notes       = document.getElementById('peNotes').value.trim();
-
-  const subject = encodeURIComponent('Print Enquiry from '+name);
-  const body    = encodeURIComponent(
-    'Name: '              + name     + '\n' +
-    'Email: '             + email    + '\n' +
-    'Phone / WhatsApp: '  + phone    + '\n\n' +
-    'Print Size: '        + size     + '\n' +
-    'Shipping: '          + shipping + '\n\n' +
-    'Photo Reference: '   + ref      + '\n\n' +
-    'Notes: '             + (notes||'--')
-  );
-
-  window.location.href='mailto:thoughtsmadevisuals@gmail.com?subject='+subject+'&body='+body;
-
-  document.getElementById('peForm').style.display='none';
-  document.getElementById('peSuccess').style.display='block';
-}
 
 // ── HOME CONTACT FORM ──
 function submitHomeContact(){
